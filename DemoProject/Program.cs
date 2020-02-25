@@ -72,6 +72,7 @@ namespace DemoProject
             }
             else
             {
+                // dummy line added
                 Console.WriteLine("Test failed");
             }
 
