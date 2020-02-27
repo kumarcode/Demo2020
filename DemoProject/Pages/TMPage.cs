@@ -49,7 +49,7 @@ namespace DemoProject.Pages
 
         public void DeleteTM(IWebDriver driver)
         {
-            //write the lines of code that performs and validates delete test cases
+            //write the lines of code that performs and validates edit test cases
         }
     }
 }
