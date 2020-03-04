@@ -58,7 +58,7 @@ namespace DemoProject
     }
 
     [TestFixture, Description("Time and Material Test Cases")]
-    [Parallelizable]
+    //[Parallelizable]
     class TimeandMaterialTestSuite : CommonDriver
     {
         [Test, Description("Check if an user is able to add TM with valid data")]
@@ -105,7 +105,7 @@ namespace DemoProject
     }
 
     [TestFixture, Description("Customer Test Cases")]
-    [Parallelizable]
+    //[Parallelizable]
     class CustomerTestSuite : CommonDriver
     {
         [Test, Description("Check if an user is able to add Customer with valid data")]

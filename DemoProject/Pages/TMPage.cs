@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,16 +31,18 @@ namespace DemoProject.Pages
             // go to last page
             driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]")).Click();
 
-            // verify if the created time and material record is present
-            if (driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr/td[1]")).Text == "up")
-            {
-                Console.WriteLine("TM created successfully, test passed");
-            }
-            else
-            {
-                // dummy line added
-                Console.WriteLine("Test failed");
-            }
+            Assert.That(driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr/td[1]")).Text, Is.EqualTo("up"));
+
+            //// verify if the created time and material record is present
+            //if (driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr/td[1]")).Text == "up")
+            //{
+            //    Console.WriteLine("TM created successfully, test failed");
+            //}
+            //else
+            //{
+            //    // dummy line added
+            //    Console.WriteLine("Test passed");
+            //}
         }
 
         public void EditTM(IWebDriver driver)
