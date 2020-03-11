@@ -50,9 +50,12 @@ namespace DemoProject.Pages
             //write the lines of code that performs and validates edit test cases
         }
 
+
         public void DeleteTM(IWebDriver driver)
         {
-            //write the lines of code that performs and validates edit test cases
+            Thread.Sleep(4000);
+            string countBeforeDelete = driver.FindElement(By.XPath(".//*[@data-role='pager']")).Text.Remove(0, 150);
+            Console.WriteLine(countBeforeDelete);
         }
     }
 }
